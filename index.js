@@ -1,3 +1,8 @@
+//         --------------- SOME IMPORTANT TOPICS --------------------
+//  - First Class Functions
+
+//           ---------------------- END  --------------------------
+
 // // ---- CLOSURE EXAMPLE ----
 // // Case 1:
 // function outer() {
