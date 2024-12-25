@@ -1,5 +1,7 @@
 //         --------------- SOME IMPORTANT TOPICS --------------------
 //  - First Class Functions
+//  - Callback functions and Event Listeners
+//  - Asynchronous JavaScript and Event Loop
 
 //           ---------------------- END  --------------------------
 
