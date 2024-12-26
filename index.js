@@ -2,6 +2,7 @@
 //  - First Class Functions
 //  - Callback functions and Event Listeners
 //  - Asynchronous JavaScript and Event Loop
+//  - Execution context, Global execution context and Call Stack
 
 //           ---------------------- END  --------------------------
 
