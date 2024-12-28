@@ -3,6 +3,8 @@
 //  - Callback functions and Event Listeners
 //  - Asynchronous JavaScript and Event Loop
 //  - Execution context, Global execution context and Call Stack
+//  - Hoisting
+//  - Scope, Scope chain and Lexical environment
 
 //           ---------------------- END  --------------------------
 
