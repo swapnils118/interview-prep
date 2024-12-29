@@ -5,6 +5,9 @@
 //  - Execution context, Global execution context and Call Stack
 //  - Hoisting
 //  - Scope, Scope chain and Lexical environment
+//  - What is React router
+//  - Why do we need React router
+//  - How is React routing different from Conventional routing
 
 //           ---------------------- END  --------------------------
 
