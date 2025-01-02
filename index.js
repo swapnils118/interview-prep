@@ -5,6 +5,9 @@
 //  - Execution context, Global execution context and Call Stack
 //  - Hoisting
 //  - Scope, Scope chain and Lexical environment
+//  - Features of React
+//  - Difference between virtual and real DOM
+//  - Can web browsers read JSX directly
 //  - What is React router
 //  - Why do we need React router
 //  - How is React routing different from Conventional routing
