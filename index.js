@@ -11,6 +11,10 @@
 //  - What is React router
 //  - Why do we need React router
 //  - How is React routing different from Conventional routing
+//  - What are props in React
+//  - How we pass props between components
+//  - Differences between state and props
+//  -
 
 //           ---------------------- END  --------------------------
 
@@ -21,6 +25,7 @@
 
 //   function inner() {
 //     console.log(a);
+//     // var a = 100 will give undefined here because of hoisting because wen are trying to access a before initialization here in local scope
 //   }
 //   var a = 20;
 //   return inner;
@@ -80,30 +85,30 @@
 // var result3 = outer3();
 // result3();
 
-// ---- CALLBACK FUNCTION ----
+// // ---- CALLBACK FUNCTION ----
 
-setTimeout(function () {
-  console.log("This is a Callback function with a timer");
-}, 4000);
+// setTimeout(function () {
+//   console.log("This is a Callback function with a timer");
+// }, 4000);
 
-function a(x) {
-  console.log("I am function 'a'");
-  x();
-}
+// function a(x) {
+//   console.log("I am function 'a'");
+//   x();
+// }
 
-a(function x() {
-  console.log(
-    "I am going to be an argument to function 'a'. Refer me as callback function"
-  );
-});
+// a(function x() {
+//   console.log(
+//     "I am going to be an argument to function 'a'. Refer me as callback function"
+//   );
+// });
 
-// ---- CLOSURE DEMO WITH EVENT LISTENERS ----
+// // ---- CLOSURE DEMO WITH EVENT LISTENERS ----
 
-function attachEventListener() {
-  let count = 0;
-  document.getElementById("clickMe").addEventListener("click", function s() {
-    console.log("Button clicked", count++);
-  });
-}
+// function attachEventListener() {
+//   let count = 0;
+//   document.getElementById("clickMe").addEventListener("click", function s() {
+//     console.log("Button clicked", count++);
+//   });
+// }
 
-attachEventListener();
+// attachEventListener();
