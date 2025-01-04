@@ -14,7 +14,8 @@
 //  - What are props in React
 //  - How we pass props between components
 //  - Differences between state and props
-//  -
+//  - Difference between Class and Functional component
+//  - Lifecycle methods of component
 
 //           ---------------------- END  --------------------------
 
