@@ -16,6 +16,12 @@
 //  - Differences between state and props
 //  - Difference between Class and Functional component
 //  - Lifecycle methods of component
+//  - What is Redux
+//  - Components of Redux
+//  - What is a Flux
+//  - How is Redux different from Flux
+//  - Difference between Redux and Context Api
+//  -
 
 //           ---------------------- END  --------------------------
 
