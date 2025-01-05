@@ -21,6 +21,10 @@
 //  - What is a Flux
 //  - How is Redux different from Flux
 //  - Difference between Redux and Context Api
+//  - What is React Router
+//  - Why do we need React Router
+//  - How is React Routing different from Conventional Routing
+//  - How do we implement React Routing
 //  -
 
 //           ---------------------- END  --------------------------
