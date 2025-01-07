@@ -25,7 +25,7 @@
 //  - Why do we need React Router
 //  - How is React Routing different from Conventional Routing
 //  - How do we implement React Routing
-//  -
+//  - First class functions
 
 //           ---------------------- END  --------------------------
 
