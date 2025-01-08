@@ -26,10 +26,11 @@
 //  - How is React Routing different from Conventional Routing
 //  - How do we implement React Routing
 //  - First class functions
+//  - Call , apply and bind
 
 //           ---------------------- END  --------------------------
 
-// // ---- CLOSURE EXAMPLE ----
+// // ---------------------- CLOSURE EXAMPLE --------------------
 // // Case 1:
 // function outer() {
 //   var a = 10;
@@ -96,7 +97,7 @@
 // var result3 = outer3();
 // result3();
 
-// // ---- CALLBACK FUNCTION ----
+// // ------------------ CALLBACK FUNCTION -------------------------------
 
 // setTimeout(function () {
 //   console.log("This is a Callback function with a timer");
@@ -113,7 +114,7 @@
 //   );
 // });
 
-// // ---- CLOSURE DEMO WITH EVENT LISTENERS ----
+// // ----------- CLOSURE DEMO WITH EVENT LISTENERS ---------------------
 
 // function attachEventListener() {
 //   let count = 0;
@@ -123,3 +124,32 @@
 // }
 
 // attachEventListener();
+
+// -------------------- Call, apply and bind ----------------------
+
+// Call
+let name = {
+  firstName: "Swapnil",
+  lastName: "Sharma",
+  printFullName: function (city, country) {
+    console.log(
+      this.firstName + " " + this.lastName + " from " + city + ", " + country
+    );
+  },
+};
+
+name.printFullName.call(name, "Jammu", "India");
+
+let name2 = {
+  firstName: "Mark",
+  lastName: "Hill",
+};
+// FUNCTION BORROWING
+name.printFullName.call(name2, "California", "USA");
+
+// apply
+name.printFullName.apply(name2, ["Cali", "States"]);
+
+// bind
+let myName = name.printFullName.bind(name, "Jammu", "IN");
+myName();
