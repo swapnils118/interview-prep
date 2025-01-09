@@ -156,29 +156,49 @@
 
 //------------------ POLYFILL FOR BIND METHOD ----------------------
 
-// Regular example of bind method
-let name = {
-  firstName: "Swapnil",
-  lastName: "Sharma",
+// // Regular example of bind method
+// let name = {
+//   firstName: "Swapnil",
+//   lastName: "Sharma",
+// };
+
+// let printFullName = function (hometown, country) {
+//   console.log(
+//     this.firstName + " " + this.lastName + ", " + hometown + ", " + country
+//   );
+// };
+
+// let printName = printFullName.bind(name, "Jammu");
+// printName("IND");
+
+// // Our own implementation of traditional bind method and we are naming it mybind
+// Function.prototype.mybind = function (...args) {
+//   let obj = this;
+//   params = args.slice(1);
+//   return function (...args2) {
+//     obj.apply(args[0], [...params, ...args2]);
+//   };
+// };
+
+// let printName2 = printFullName.mybind(name, "Jammu");
+// printName2("IND");
+
+// ---------------------------- DEBOUNCING --------------------------
+let count = 0;
+const getData = () => {
+  console.log("Typing event", count++);
 };
-
-let printFullName = function (hometown, country) {
-  console.log(
-    this.firstName + " " + this.lastName + ", " + hometown + ", " + country
-  );
-};
-
-let printName = printFullName.bind(name, "Jammu");
-printName("IND");
-
-// Our own implementation of traditional bind method and we are naming it mybind
-Function.prototype.mybind = function (...args) {
-  let obj = this;
-  params = args.slice(1);
-  return function (...args2) {
-    obj.apply(args[0], [...params, ...args2]);
+// Debouncing implementation
+const debounce = function (fn, delay) {
+  let timer;
+  return function () {
+    let context = this;
+    let args = arguments;
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      fn.apply(context, args);
+    }, delay);
   };
 };
 
-let printName2 = printFullName.mybind(name, "Jammu");
-printName2("IND");
+const debounced = debounce(getData, 400);
