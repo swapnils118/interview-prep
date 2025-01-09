@@ -127,29 +127,58 @@
 
 // -------------------- Call, apply and bind ----------------------
 
-// Call
+// // Call
+// let name = {
+//   firstName: "Swapnil",
+//   lastName: "Sharma",
+//   printFullName: function (city, country) {
+//     console.log(
+//       this.firstName + " " + this.lastName + " from " + city + ", " + country
+//     );
+//   },
+// };
+
+// name.printFullName.call(name, "Jammu", "India");
+
+// let name2 = {
+//   firstName: "Mark",
+//   lastName: "Hill",
+// };
+// // FUNCTION BORROWING
+// name.printFullName.call(name2, "California", "USA");
+
+// // apply
+// name.printFullName.apply(name2, ["Cali", "States"]);
+
+// // bind
+// let myName = name.printFullName.bind(name, "Jammu", "IN");
+// myName();
+
+//------------------ POLYFILL FOR BIND METHOD ----------------------
+
+// Regular example of bind method
 let name = {
   firstName: "Swapnil",
   lastName: "Sharma",
-  printFullName: function (city, country) {
-    console.log(
-      this.firstName + " " + this.lastName + " from " + city + ", " + country
-    );
-  },
 };
 
-name.printFullName.call(name, "Jammu", "India");
-
-let name2 = {
-  firstName: "Mark",
-  lastName: "Hill",
+let printFullName = function (hometown, country) {
+  console.log(
+    this.firstName + " " + this.lastName + ", " + hometown + ", " + country
+  );
 };
-// FUNCTION BORROWING
-name.printFullName.call(name2, "California", "USA");
 
-// apply
-name.printFullName.apply(name2, ["Cali", "States"]);
+let printName = printFullName.bind(name, "Jammu");
+printName("IND");
 
-// bind
-let myName = name.printFullName.bind(name, "Jammu", "IN");
-myName();
+// Our own implementation of traditional bind method and we are naming it mybind
+Function.prototype.mybind = function (...args) {
+  let obj = this;
+  params = args.slice(1);
+  return function (...args2) {
+    obj.apply(args[0], [...params, ...args2]);
+  };
+};
+
+let printName2 = printFullName.mybind(name, "Jammu");
+printName2("IND");
