@@ -26,7 +26,12 @@
 //  - How is React Routing different from Conventional Routing
 //  - How do we implement React Routing
 //  - First class functions
-//  - Call , apply and bind
+//  - Call, apply and bind
+//  - Polyfill for bind method
+//  - Debouncing
+//  - Polyfill for debouncing
+//  - Throttling
+//  -
 
 //           ---------------------- END  --------------------------
 
@@ -114,7 +119,7 @@
 //   );
 // });
 
-// // ----------- CLOSURE DEMO WITH EVENT LISTENERS ---------------------
+// // --------------- CLOSURE DEMO WITH EVENT LISTENERS ---------------------
 
 // function attachEventListener() {
 //   let count = 0;
@@ -183,7 +188,7 @@
 // let printName2 = printFullName.mybind(name, "Jammu");
 // printName2("IND");
 
-// ---------------------------- DEBOUNCING --------------------------
+// ---------------------------- DEBOUNCING ------------------------------
 let count = 0;
 const getData = () => {
   console.log("Typing event", count++);
