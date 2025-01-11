@@ -33,6 +33,9 @@
 //  - Throttling
 //  - Debouncing vs Throttling
 //  - Currying function
+//  - async and defer attribute
+//  - Event bubbling and event capturing
+//  -
 
 //           ---------------------- END  --------------------------
 
@@ -223,14 +226,40 @@
 // multiplyByThree(3);
 
 // WITH CLOSURES
-let multiply = function (x) {
-  return function (y) {
-    console.log(x * y);
-  };
-};
+// let multiply = function (x) {
+//   return function (y) {
+//     console.log(x * y);
+//   };
+// };
 
-let multiplyByTwo = multiply(2);
-multiplyByTwo(2);
+// let multiplyByTwo = multiply(2);
+// multiplyByTwo(2);
 
-let multiplyByThree = multiply(3);
-multiplyByThree(2);
+// let multiplyByThree = multiply(3);
+// multiplyByThree(2);
+
+// ------------------- EVENT BUBBLING AND EVENT CAPTURING ----------------
+
+document.querySelector("#grandparent").addEventListener(
+  "click",
+  () => {
+    console.log("Grandparent clicked");
+  },
+  false
+);
+
+document.querySelector("#parent").addEventListener(
+  "click",
+  () => {
+    console.log("Parent clicled");
+  },
+  false
+);
+
+document.querySelector("#child").addEventListener(
+  "click",
+  () => {
+    console.log("Child clicked");
+  },
+  false
+);

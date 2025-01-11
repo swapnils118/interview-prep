@@ -2,12 +2,27 @@
 <html lang="en">
   <head>
     <title>Interview prep</title>
+    <style>
+      div {
+        min-height: 100px;
+        min-width: 100px;
+        padding: 30px;
+        margin: 20px;
+        border: 1px solid black;
+      }
+    </style>
   </head>
 
   <body>
+    <div id="grandparent">
+      <div id="parent">
+        <div id="child"></div>
+      </div>
+    </div>
+
     <h1>Practice</h1>
-    <button id="clickMe">Click me</button>
-    <input type="text" onkeyup="debounced()" />
+    <!-- <button id="clickMe">Click me</button> -->
+    <!-- <input type="text" onkeyup="debounced()" /> -->
     <script src="index.js"></script>
   </body>
 </html>
