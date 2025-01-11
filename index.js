@@ -31,7 +31,8 @@
 //  - Debouncing
 //  - Polyfill for debouncing
 //  - Throttling
-//  -
+//  - Debouncing vs Throttling
+//  - Currying function
 
 //           ---------------------- END  --------------------------
 
@@ -189,21 +190,34 @@
 // printName2("IND");
 
 // ---------------------------- DEBOUNCING ------------------------------
-let count = 0;
-const getData = () => {
-  console.log("Typing event", count++);
-};
-// Debouncing implementation
-const debounce = function (fn, delay) {
-  let timer;
-  return function () {
-    let context = this;
-    let args = arguments;
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      fn.apply(context, args);
-    }, delay);
-  };
-};
+// let count = 0;
+// const getData = () => {
+//   console.log("Typing event", count++);
+// };
+// // Debouncing implementation
+// const debounce = function (fn, delay) {
+//   let timer;
+//   return function () {
+//     let context = this;
+//     let args = arguments;
+//     clearTimeout(timer);
+//     timer = setTimeout(() => {
+//       fn.apply(context, args);
+//     }, delay);
+//   };
+// };
 
-const debounced = debounce(getData, 400);
+// const debounced = debounce(getData, 400);
+
+// ---------------------------- CURRYING FUNCTION -----------------------
+
+let multiply = function (x, y) {
+  console.log(x * y);
+};
+// WITH BIND METHOD
+
+multiplyByTwo = multiply.bind(this, 2);
+multiplyByTwo(3);
+
+multiplyByThree = multiply.bind(this, 3);
+multiplyByThree(3);
