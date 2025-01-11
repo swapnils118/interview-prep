@@ -240,26 +240,35 @@
 
 // ------------------- EVENT BUBBLING AND EVENT CAPTURING ----------------
 
-document.querySelector("#grandparent").addEventListener(
-  "click",
-  () => {
-    console.log("Grandparent clicked");
-  },
-  false
-);
+// document.querySelector("#grandparent").addEventListener(
+//   "click",
+//   () => {
+//     console.log("Grandparent clicked");
+//   },
+//   false
+// );
 
-document.querySelector("#parent").addEventListener(
-  "click",
-  () => {
-    console.log("Parent clicled");
-  },
-  false
-);
+// document.querySelector("#parent").addEventListener(
+//   "click",
+//   () => {
+//     console.log("Parent clicled");
+//   },
+//   false
+// );
 
-document.querySelector("#child").addEventListener(
-  "click",
-  () => {
-    console.log("Child clicked");
-  },
-  false
-);
+// document.querySelector("#child").addEventListener(
+//   "click",
+//   () => {
+//     console.log("Child clicked");
+//   },
+//   false
+// );
+
+// ---------------------- EVENT DELEGATION ---------------------------
+
+document.querySelector("#container").addEventListener("click", (e) => {
+  console.log(e.target.id);
+  if (e.target.tagName == "LI") {
+    window.location.href = e.target.id;
+  }
+});
