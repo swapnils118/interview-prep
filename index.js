@@ -35,6 +35,9 @@
 //  - Currying function
 //  - async and defer attribute
 //  - Event bubbling and event capturing
+//  - Event delegation
+//  - Prototype and Prototypal inheritance
+//  - Session and local storage
 //  -
 
 //           ---------------------- END  --------------------------
@@ -266,9 +269,28 @@
 
 // ---------------------- EVENT DELEGATION ---------------------------
 
-document.querySelector("#container").addEventListener("click", (e) => {
-  console.log(e.target.id);
-  if (e.target.tagName == "LI") {
-    window.location.href = e.target.id;
-  }
-});
+// document.querySelector("#container").addEventListener("click", (e) => {
+//   console.log(e.target.id);
+//   if (e.target.tagName == "LI") {
+//     window.location.href = e.target.id;
+//   }
+// });
+
+// -------------------- PROTOTYPE AND PROTOTYPAL INHERITANCE --------------
+// Creating a parent object as a prototype
+const parent = {
+  greet: function () {
+    console.log("Hello from Parent");
+  },
+};
+
+// Creating a child object
+const child = {
+  name: "Child object",
+};
+
+// Performing prototype inheritance
+child.__proto__ = parent;
+
+// Accessing the method from the parent prototype
+child.greet();
