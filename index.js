@@ -277,20 +277,33 @@
 // });
 
 // -------------------- PROTOTYPE AND PROTOTYPAL INHERITANCE --------------
-// Creating a parent object as a prototype
-const parent = {
-  greet: function () {
-    console.log("Hello from Parent");
-  },
+// // Creating a parent object as a prototype
+// const parent = {
+//   greet: function () {
+//     console.log("Hello from Parent");
+//   },
+// };
+
+// // Creating a child object
+// const child = {
+//   name: "Child object",
+// };
+
+// // Performing prototype inheritance
+// child.__proto__ = parent;
+
+// // Accessing the method from the parent prototype
+// child.greet();
+
+// --------------------------- PROBLEM -----------------------
+// sum(1)(2)(3)(4)... ()
+
+let sum = function (a) {
+  return function (b) {
+    if (b) {
+      return sum(a + b);
+    }
+    return a;
+  };
 };
-
-// Creating a child object
-const child = {
-  name: "Child object",
-};
-
-// Performing prototype inheritance
-child.__proto__ = parent;
-
-// Accessing the method from the parent prototype
-child.greet();
+console.log(sum(1)(2)(3)(4)());
