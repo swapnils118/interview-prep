@@ -38,7 +38,12 @@
 //  - Event delegation
 //  - Prototype and Prototypal inheritance
 //  - Session and local storage
-//  -
+//  - Attributes in HTML
+//  - Why markup language is important
+//  - How HTML is different from XML
+//  - Basic building blocks of HTML
+//  - Purpose of attributes in HTML tags
+//  - Why we use external CSS file? What's the use?
 
 //           ---------------------- END  --------------------------
 
@@ -296,14 +301,14 @@
 // child.greet();
 
 // --------------------------- PROBLEM -----------------------
-// sum(1)(2)(3)(4)... ()
+// // sum(1)(2)(3)(4)... ()
 
-let sum = function (a) {
-  return function (b) {
-    if (b) {
-      return sum(a + b);
-    }
-    return a;
-  };
-};
-console.log(sum(1)(2)(3)(4)());
+// let sum = function (a) {
+//   return function (b) {
+//     if (b) {
+//       return sum(a + b);
+//     }
+//     return a;
+//   };
+// };
+// console.log(sum(1)(2)(3)(4)());
