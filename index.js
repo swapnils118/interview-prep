@@ -313,8 +313,9 @@
 // };
 // console.log(sum(1)(2)(3)(4)());
 
-// CALCULATE AREA OF CIRCLE
+// ----------------------- CIRCLE QUESTIONS ----------------------
 
+// AREA OF CIRCLE
 const radius = [2, 4, 6, 8];
 
 const calculateArea = function (radius) {
@@ -326,3 +327,14 @@ const calculateArea = function (radius) {
 };
 
 console.log(calculateArea(radius));
+
+// CIRCUMFERENCE OF CIRCLE
+const calculateCircumference = function (radius) {
+  const output = [];
+  for (let i = 0; i < radius.length; i++) {
+    output.push(2 * Math.PI * radius[i]);
+  }
+  return output;
+};
+
+console.log(calculateCircumference(radius));
