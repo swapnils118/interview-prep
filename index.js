@@ -45,6 +45,8 @@
 //  - Purpose of attributes in HTML tags
 //  - Why we use external CSS file? What's the use?
 //  - Higher order functions
+//  - What is a Single page application
+//  -
 
 //           ---------------------- END  --------------------------
 
