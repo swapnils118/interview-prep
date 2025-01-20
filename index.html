@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <title>Interview prep</title>
+    <link rel="stylesheet" href="index.css" />
+
     <!-- <style>
       div {
         min-height: 100px;
@@ -14,13 +16,42 @@
   </head>
 
   <body>
-    <h1>Practice</h1>
-    <!-- <label>Married<input type="radio" name="marital" value="mar" /> </label>
+    <div id="control">
+      <label
+        >One way
+        <input type="radio" id="oneWayRadio" name="tripType" checked />
+      </label>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <label
+        >Return
+        <input type="radio" id="returnRadio" name="tripType" />
+      </label>
+      <br />
+      <br />
+      <input type="button" id="submitButton" value="Click me to Submit" />
+    </div>
     <br />
+    <br />
+
+    <div id="inputs">
+      <label> From: <input type="text" id="fromInput" /> </label>
+      <span id="fromSpan"></span><br />
+      <label> To: <input type="text" id="toInput" /> </label>
+      <span id="toSpan"></span><br />
+      <label> Departure: <input type="text" id="departureInput" /> </label>
+      <span id="departureSpan"></span><br />
+      <label id="returnContainer">
+        Return: <input type="text" id="returnInput" />
+      </label>
+      <span id="returnSpan"></span>
+    </div>
+
+    <!-- <h1>Practice</h1>
+    <label>Married<input type="radio" name="marital" value="mar" /> </label>
+
     <label>Unmarried<input type="radio" name="marital" value="unm" /> </label>
     <br /><br />
-
-    <label>Teenager<input type="radio" name="age" value="teen" /></label> <br />
+    <label>Teenager<input type="radio" name="age" value="teen" /></label>
     <label>Adult<input type="radio" name="age" value="adu" /></label> -->
 
     <!-- <div>
@@ -39,6 +70,7 @@
 
     <!-- <button id="clickMe">Click me</button> -->
     <!-- <input type="text" onkeyup="debounced()" /> -->
+
     <script src="index.js"></script>
   </body>
 </html>

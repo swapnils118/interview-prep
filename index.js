@@ -318,53 +318,89 @@
 
 // ----------------------- CIRCLE QUESTIONS ----------------------
 
-// AREA OF CIRCLE
-const radius = [2, 4, 6, 8];
+// // AREA OF CIRCLE
+// const radius = [2, 4, 6, 8];
 
-const calculateArea = function (radius) {
-  const output = [];
-  for (let i = 0; i < radius.length; i++) {
-    output.push(Math.PI * radius[i] * radius[i]);
+// const calculateArea = function (radius) {
+//   const output = [];
+//   for (let i = 0; i < radius.length; i++) {
+//     output.push(Math.PI * radius[i] * radius[i]);
+//   }
+//   return output;
+// };
+
+// console.log(calculateArea(radius));
+
+// // CIRCUMFERENCE OF CIRCLE
+// const calculateCircumference = function (radius) {
+//   const output = [];
+//   for (let i = 0; i < radius.length; i++) {
+//     output.push(2 * Math.PI * radius[i]);
+//   }
+//   return output;
+// };
+
+// console.log(calculateCircumference(radius));
+
+// // Diameter of circle
+// const calculateDiameter = function (radius) {
+//   const output = [];
+//   for (let i = 0; i < radius.length; i++) {
+//     output.push(2 * radius[i]);
+//   }
+//   return output;
+// };
+// console.log(calculateDiameter(radius));
+
+// // MAKING A GENERIC FUNCTION OF ABOVE FUNCTION
+
+// const calculate = function (radius, logic) {
+//   const output = [];
+//   for (let i = 0; i < radius.length; i++) {
+//     output.push(logic(radius[i]));
+//   }
+//   return output;
+// };
+
+// // Function to calculate area
+// const area = function (radius) {
+//   return Math.PI * radius * radius;
+// };
+// // Calling
+// console.log(calculate(radius, area));
+
+// --------------------- INTERVIEW QUESTION from Jan, 2025 -------------------------
+const radio = document.querySelector("#oneWayRadio");
+const returnRadio = document.querySelector("#returnRadio");
+const returnContainer = document.querySelector("#returnContainer");
+const returnInput = document.querySelector("#returnInput");
+const submitButton = document.querySelector("#submitButton");
+
+// Toggle hidden class
+const toggleRadio = () => {
+  if (radio.checked) {
+    returnContainer.classList.add("hidden");
+  } else if (returnRadio.checked) {
+    returnContainer.classList.remove("hidden");
   }
-  return output;
 };
+// Triggering function for initial load of page
+toggleRadio();
 
-console.log(calculateArea(radius));
+// Handle toggle
+radio.addEventListener("change", toggleRadio);
+returnRadio.addEventListener("change", toggleRadio);
 
-// CIRCUMFERENCE OF CIRCLE
-const calculateCircumference = function (radius) {
-  const output = [];
-  for (let i = 0; i < radius.length; i++) {
-    output.push(2 * Math.PI * radius[i]);
+// Task 4: Handle submit button click
+submitButton.addEventListener("click", () => {
+  document.getElementById("fromSpan").textContent =
+    document.getElementById("fromInput").value;
+  document.getElementById("toSpan").textContent =
+    document.getElementById("toInput").value;
+  document.getElementById("departureSpan").textContent =
+    document.getElementById("departureInput").value;
+
+  if (!returnContainer.classList.contains("hidden")) {
+    document.getElementById("returnSpan").textContent = returnInput.value;
   }
-  return output;
-};
-
-console.log(calculateCircumference(radius));
-
-// Diameter of circle
-const calculateDiameter = function (radius) {
-  const output = [];
-  for (let i = 0; i < radius.length; i++) {
-    output.push(2 * radius[i]);
-  }
-  return output;
-};
-console.log(calculateDiameter(radius));
-
-// MAKING A GENERIC FUNCTION OF ABOVE FUNCTION
-
-const calculate = function (radius, logic) {
-  const output = [];
-  for (let i = 0; i < radius.length; i++) {
-    output.push(logic(radius[i]));
-  }
-  return output;
-};
-
-// Function to calculate area
-const area = function (radius) {
-  return Math.PI * radius * radius;
-};
-// Calling
-console.log(calculate(radius, area));
+});
