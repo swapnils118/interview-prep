@@ -46,7 +46,7 @@
 //  - Why we use external CSS file? What's the use?
 //  - Higher order functions
 //  - What is a Single page application
-//  -
+//  - map, filter and reduce
 
 //           ---------------------- END  --------------------------
 
@@ -370,37 +370,37 @@
 // console.log(calculate(radius, area));
 
 // --------------------- INTERVIEW QUESTION from Jan, 2025 -------------------------
-const radio = document.querySelector("#oneWayRadio");
-const returnRadio = document.querySelector("#returnRadio");
-const returnContainer = document.querySelector("#returnContainer");
-const returnInput = document.querySelector("#returnInput");
-const submitButton = document.querySelector("#submitButton");
+// const radio = document.querySelector("#oneWayRadio");
+// const returnRadio = document.querySelector("#returnRadio");
+// const returnContainer = document.querySelector("#returnContainer");
+// const returnInput = document.querySelector("#returnInput");
+// const submitButton = document.querySelector("#submitButton");
 
-// Toggle hidden class
-const toggleRadio = () => {
-  if (radio.checked) {
-    returnContainer.classList.add("hidden");
-  } else if (returnRadio.checked) {
-    returnContainer.classList.remove("hidden");
-  }
-};
-// Triggering function for initial load of page
-toggleRadio();
+// // Toggle hidden class
+// const toggleRadio = () => {
+//   if (radio.checked) {
+//     returnContainer.classList.add("hidden");
+//   } else if (returnRadio.checked) {
+//     returnContainer.classList.remove("hidden");
+//   }
+// };
+// // Triggering function for initial load of page
+// toggleRadio();
 
-// Handle toggle
-radio.addEventListener("change", toggleRadio);
-returnRadio.addEventListener("change", toggleRadio);
+// // Handle toggle
+// radio.addEventListener("change", toggleRadio);
+// returnRadio.addEventListener("change", toggleRadio);
 
-// Task 4: Handle submit button click
-submitButton.addEventListener("click", () => {
-  document.getElementById("fromSpan").textContent =
-    document.getElementById("fromInput").value;
-  document.getElementById("toSpan").textContent =
-    document.getElementById("toInput").value;
-  document.getElementById("departureSpan").textContent =
-    document.getElementById("departureInput").value;
+// // Task 4: Handle submit button click
+// submitButton.addEventListener("click", () => {
+//   document.getElementById("fromSpan").textContent =
+//     document.getElementById("fromInput").value;
+//   document.getElementById("toSpan").textContent =
+//     document.getElementById("toInput").value;
+//   document.getElementById("departureSpan").textContent =
+//     document.getElementById("departureInput").value;
 
-  if (!returnContainer.classList.contains("hidden")) {
-    document.getElementById("returnSpan").textContent = returnInput.value;
-  }
-});
+//   if (!returnContainer.classList.contains("hidden")) {
+//     document.getElementById("returnSpan").textContent = returnInput.value;
+//   }
+// });
