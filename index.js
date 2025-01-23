@@ -404,3 +404,20 @@
 //     document.getElementById("returnSpan").textContent = returnInput.value;
 //   }
 // });
+
+// ------------------------ Polyfill for map -------------------------
+const calculate = function (arr, logic) {
+  let output = [];
+  for (let i = 0; i < arr.length; i++) {
+    output.push(logic(arr[i]));
+  }
+  return output;
+};
+
+const arr = [2, 3, 4, 5, 6];
+
+const area = function (radius) {
+  return Math.PI * radius * radius;
+};
+
+console.log(calculate(arr, area));
