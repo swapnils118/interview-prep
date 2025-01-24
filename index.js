@@ -47,6 +47,8 @@
 //  - Higher order functions
 //  - What is a Single page application
 //  - map, filter and reduce
+//  - Polyfill for map
+//  -
 
 //           ---------------------- END  --------------------------
 
@@ -192,6 +194,7 @@
 // printName("IND");
 
 // // Our own implementation of traditional bind method and we are naming it mybind
+
 // Function.prototype.mybind = function (...args) {
 //   let obj = this;
 //   params = args.slice(1);
@@ -406,17 +409,40 @@
 // });
 
 // ------------------------ Polyfill for map -------------------------
-Array.prototype.calculate = function (logic) {
-  let output = [];
-  for (let i = 0; i < arr.length; i++) {
-    output.push(logic(arr[i]));
-  }
-  return output;
-};
+// Array.prototype.calculate = function (logic) {
+//   let output = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     output.push(logic(arr[i]));
+//   }
+//   return output;
+// };
 
-const arr = [2, 3, 4, 5, 6];
+// const arr = [2, 3, 4, 5, 6];
 
-const area = function (radius) {
-  return Math.PI * radius * radius;
-};
-console.log(arr.calculate(area));
+// const area = function (radius) {
+//   return Math.PI * radius * radius;
+// };
+// console.log(arr.calculate(area));
+
+// -------------------------- map in practice ------------------------
+
+const arr = [1, 2, 3, 4, 5];
+
+function double(x) {
+  return x * 2;
+}
+
+function triple(x) {
+  return x * 3;
+}
+function binary(x) {
+  return x.toString(2);
+}
+
+// Calling
+const output = arr.map(binary);
+console.log(output);
+
+// Also if we do it with arrow function
+const output1 = arr.map((e) => e.toString(2));
+console.log(output1);
