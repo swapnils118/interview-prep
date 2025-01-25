@@ -426,23 +426,71 @@
 
 // -------------------------- map in practice ------------------------
 
-const arr = [1, 2, 3, 4, 5];
+// const arr = [1, 2, 3, 4, 5];
 
-function double(x) {
-  return x * 2;
-}
+// function double(x) {
+//   return x * 2;
+// }
 
-function triple(x) {
-  return x * 3;
-}
-function binary(x) {
-  return x.toString(2);
-}
+// function triple(x) {
+//   return x * 3;
+// }
+// function binary(x) {
+//   return x.toString(2);
+// }
 
+// // Calling
+// const output = arr.map(binary);
+// console.log(output);
+
+// // Also if we do it with arrow function
+// const output1 = arr.map((e) => e.toString(2));
+// console.log(output1);
+
+// ------------------------- filter ---------------------------------
+
+// const arr = [1, 2, 3, 4, 5, 6];
+
+// function oddOut(x) {
+//   return x % 2 === 0;
+// }
+
+// function evenOut(x) {
+//   return x % 2 !== 0;
+// }
+
+// function greaterThan4(x) {
+//   return x > 4;
+// }
+
+// // Calling
+// const result = arr.filter(greaterThan4);
+// console.log(result);
+
+// // Using arrow function
+// const output = arr.filter((x) => x > 4);
+// console.log(output);
+
+// --------------------------- reduce ---------------------------
+// Traditional approach to sum the elements of an array
+const arr = [2, 4, 6, 8, 10];
+
+function sumUp(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
+  }
+  return sum;
+}
 // Calling
-const output = arr.map(binary);
-console.log(output);
+const result = sumUp(arr);
+console.log(result);
 
-// Also if we do it with arrow function
-const output1 = arr.map((e) => e.toString(2));
-console.log(output1);
+// Using reduce
+
+const resultReduce = arr.reduce(function (acc, curr) {
+  acc = acc + curr;
+  return acc;
+}, 0);
+
+console.log(resultReduce);
