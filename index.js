@@ -472,25 +472,53 @@
 // console.log(output);
 
 // --------------------------- reduce ---------------------------
-// Traditional approach to sum the elements of an array
-const arr = [2, 4, 6, 8, 10];
+// // Traditional approach to sum the elements of an array
+// const arr = [2, 4, 6, 8, 10];
 
-function sumUp(arr) {
-  let sum = 0;
+// function sumUp(arr) {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     sum = sum + arr[i];
+//   }
+//   return sum;
+// }
+// // Calling
+// const result = sumUp(arr);
+// console.log(result);
+
+// // Using reduce
+
+// const resultReduce = arr.reduce(function (acc, curr) {
+//   acc = acc + curr;
+//   return acc;
+// }, 0);
+
+// console.log(resultReduce);
+
+// Find the maximum number in array
+
+const arrNum = [1, 2, 3, 4, 5, 6, 7, 8];
+
+function maxNum(arr) {
+  let max = 0;
   for (let i = 0; i < arr.length; i++) {
-    sum = sum + arr[i];
+    if (arr[i] > max) {
+      max = arr[i];
+    }
   }
-  return sum;
+  return max;
 }
-// Calling
-const result = sumUp(arr);
-console.log(result);
 
-// Using reduce
+const outputMax = maxNum(arrNum);
+console.log(outputMax);
 
-const resultReduce = arr.reduce(function (acc, curr) {
-  acc = acc + curr;
+// By reduce method
+
+const maxValueUsingReduce = arrNum.reduce(function (acc, curr) {
+  if (curr > acc) {
+    acc = curr;
+  }
   return acc;
 }, 0);
 
-console.log(resultReduce);
+console.log(maxValueUsingReduce);
