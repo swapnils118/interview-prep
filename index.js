@@ -48,7 +48,7 @@
 //  - What is a Single page application
 //  - map, filter and reduce
 //  - Polyfill for map
-//  -
+//  - JavaScript Object Methods
 
 //           ---------------------- END  --------------------------
 
@@ -495,30 +495,76 @@
 
 // console.log(resultReduce);
 
-// Find the maximum number in array
+// // ------------------ Find the maximum number in array --------------------
+// const arrNum = [1, 2, 3, 4, 5, 6, 7, 8];
 
-const arrNum = [1, 2, 3, 4, 5, 6, 7, 8];
+// function maxNum(arr) {
+//   let max = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//       max = arr[i];
+//     }
+//   }
+//   return max;
+// }
 
-function maxNum(arr) {
-  let max = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > max) {
-      max = arr[i];
-    }
-  }
-  return max;
-}
+// const outputMax = maxNum(arrNum);
+// console.log(outputMax);
 
-const outputMax = maxNum(arrNum);
-console.log(outputMax);
+// // By reduce method
 
-// By reduce method
+// const maxValueUsingReduce = arrNum.reduce(function (acc, curr) {
+//   if (curr > acc) {
+//     acc = curr;
+//   }
+//   return acc;
+// }, 0);
 
-const maxValueUsingReduce = arrNum.reduce(function (acc, curr) {
-  if (curr > acc) {
-    acc = curr;
-  }
-  return acc;
-}, 0);
+// console.log(maxValueUsingReduce);
 
-console.log(maxValueUsingReduce);
+// ------------------------ Object Methods in JavaScript --------------------
+
+const obj = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+
+// Object.Keys
+console.log(Object.keys(obj));
+
+// Object.Values
+console.log(Object.values(obj));
+
+// Object.entires
+console.log(Object.entries(obj));
+
+// Object.isSealed : returns true if the object is sealed, otherwise false
+const obj1 = Object.seal({ a: 1 });
+console.log(Object.isSealed(obj1));
+
+// Object.assign : copies the value of one or more source object to a target object
+const target = { a: 1 };
+const source = { b: 1, c: 8 };
+const source1 = { d: "section D", rollno: 1 };
+const result = Object.assign(target, source, source1);
+console.log(result);
+
+// Object.freeze : freezes the object from further modification
+const objName = { name: "Swapnil" };
+objName.id = 118;
+Object.freeze(objName);
+// Object will not change now
+objName.name = "Sharma";
+console.log(objName);
+
+// Object.seal : Restricts object from adding new values but allow to modify existing values
+const objSeal = { name: "Swapnil", id: 118, email: "swapnil118@icloud.com" };
+Object.seal(objSeal);
+// existing entries can change
+objSeal.name = "Sharma";
+// New values will not be added once we seal the object
+objSeal.age = 25;
+console.log(objSeal);
+
+//
