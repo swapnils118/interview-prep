@@ -567,4 +567,48 @@ objSeal.name = "Sharma";
 objSeal.age = 25;
 console.log(objSeal);
 
-//
+// Object.create
+const person = {
+  greet() {
+    console.log("Hello world");
+  },
+};
+const anotherPerson = Object.create(person);
+anotherPerson.greet();
+
+// Object.defineProperty() : allows to define or modify one property in an object
+const objDefine = {};
+Object.defineProperty(objDefine, "name", {
+  value: "Swapnil",
+  writable: false,
+});
+console.log(objDefine);
+
+// Object.defineProperties() : multiple properties
+const objDefineMultiple = {};
+Object.defineProperties(objDefineMultiple, {
+  name: { value: "Sharma", writable: false },
+  age: { value: 25, writable: true },
+});
+console.log(objDefineMultiple);
+
+//Object.isExtensible()
+const objExtensible = {};
+console.log(Object.isExtensible(objExtensible));
+Object.preventExtensions(objExtensible);
+console.log(Object.isExtensible(objExtensible));
+
+// Object.isFrozen()
+const objFrozen = { name: "Swapnil", age: 21 };
+Object.freeze(objFrozen);
+console.log(Object.isFrozen(objFrozen));
+
+// Object.setPrototypeOf()
+const proto = {
+  greet() {
+    console.log("Hello, I am Proto");
+  },
+};
+const objProto = {};
+Object.setPrototypeOf(objProto, proto);
+objProto.greet();
