@@ -612,3 +612,20 @@ const proto = {
 const objProto = {};
 Object.setPrototypeOf(objProto, proto);
 objProto.greet();
+
+//Object.fromEntries() : Transforms a list of entries into key-value pairs into an object
+const arrEntries = [
+  ["name", "Swapnil"],
+  ["age", 22],
+  ["base", "case"],
+];
+const objEntries = Object.fromEntries(arrEntries);
+console.log(objEntries);
+
+// Object.getPrototypeOf()
+const ob = {};
+console.log(ob);
+const obProto = Object.getPrototypeOf(ob);
+console.log(obProto);
+console.log(obProto === Object.prototype);
+console.log(Object.prototype);
