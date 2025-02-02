@@ -524,108 +524,122 @@
 
 // ------------------------ Object Methods in JavaScript --------------------
 
-const obj = {
-  a: 1,
-  b: 2,
-  c: 3,
-};
+// const obj = {
+//   a: 1,
+//   b: 2,
+//   c: 3,
+// };
 
-// Object.Keys
-console.log(Object.keys(obj));
+// // Object.Keys
+// console.log(Object.keys(obj));
 
-// Object.Values
-console.log(Object.values(obj));
+// // Object.Values
+// console.log(Object.values(obj));
 
-// Object.entires
-console.log(Object.entries(obj));
+// // Object.entires
+// console.log(Object.entries(obj));
 
-// Object.isSealed : returns true if the object is sealed, otherwise false
-const obj1 = Object.seal({ a: 1 });
-console.log(Object.isSealed(obj1));
+// // Object.isSealed : returns true if the object is sealed, otherwise false
+// const obj1 = Object.seal({ a: 1 });
+// console.log(Object.isSealed(obj1));
 
-// Object.assign : copies the value of one or more source object to a target object
-const target = { a: 1 };
-const source = { b: 1, c: 8 };
-const source1 = { d: "section D", rollno: 1 };
-const result = Object.assign(target, source, source1);
-console.log(result);
+// // Object.assign : copies the value of one or more source object to a target object
+// const target = { a: 1 };
+// const source = { b: 1, c: 8 };
+// const source1 = { d: "section D", rollno: 1 };
+// const result = Object.assign(target, source, source1);
+// console.log(result);
 
-// Object.freeze : freezes the object from further modification
-const objName = { name: "Swapnil" };
-objName.id = 118;
-Object.freeze(objName);
-// Object will not change now
-objName.name = "Sharma";
-console.log(objName);
+// // Object.freeze : freezes the object from further modification
+// const objName = { name: "Swapnil" };
+// objName.id = 118;
+// Object.freeze(objName);
+// // Object will not change now
+// objName.name = "Sharma";
+// console.log(objName);
 
-// Object.seal : Restricts object from adding new values but allow to modify existing values
-const objSeal = { name: "Swapnil", id: 118, email: "swapnil118@icloud.com" };
-Object.seal(objSeal);
-// existing entries can change
-objSeal.name = "Sharma";
-// New values will not be added once we seal the object
-objSeal.age = 25;
-console.log(objSeal);
+// // Object.seal : Restricts object from adding new values but allow to modify existing values
+// const objSeal = { name: "Swapnil", id: 118, email: "swapnil118@icloud.com" };
+// Object.seal(objSeal);
+// // existing entries can change
+// objSeal.name = "Sharma";
+// // New values will not be added once we seal the object
+// objSeal.age = 25;
+// console.log(objSeal);
 
-// Object.create
-const person = {
-  greet() {
-    console.log("Hello world");
-  },
-};
-const anotherPerson = Object.create(person);
-anotherPerson.greet();
+// // Object.create
+// const person = {
+//   greet() {
+//     console.log("Hello world");
+//   },
+// };
+// const anotherPerson = Object.create(person);
+// anotherPerson.greet();
 
-// Object.defineProperty() : allows to define or modify one property in an object
-const objDefine = {};
-Object.defineProperty(objDefine, "name", {
-  value: "Swapnil",
-  writable: false,
+// // Object.defineProperty() : allows to define or modify one property in an object
+// const objDefine = {};
+// Object.defineProperty(objDefine, "name", {
+//   value: "Swapnil",
+//   writable: false,
+// });
+// console.log(objDefine);
+
+// // Object.defineProperties() : multiple properties
+// const objDefineMultiple = {};
+// Object.defineProperties(objDefineMultiple, {
+//   name: { value: "Sharma", writable: false },
+//   age: { value: 25, writable: true },
+// });
+// console.log(objDefineMultiple);
+
+// //Object.isExtensible()
+// const objExtensible = {};
+// console.log(Object.isExtensible(objExtensible));
+// Object.preventExtensions(objExtensible);
+// console.log(Object.isExtensible(objExtensible));
+
+// // Object.isFrozen()
+// const objFrozen = { name: "Swapnil", age: 21 };
+// Object.freeze(objFrozen);
+// console.log(Object.isFrozen(objFrozen));
+
+// // Object.setPrototypeOf()
+// const proto = {
+//   greet() {
+//     console.log("Hello, I am Proto");
+//   },
+// };
+// const objProto = {};
+// Object.setPrototypeOf(objProto, proto);
+// objProto.greet();
+
+// //Object.fromEntries() : Transforms a list of entries into key-value pairs into an object
+// const arrEntries = [
+//   ["name", "Swapnil"],
+//   ["age", 22],
+//   ["base", "case"],
+// ];
+// const objEntries = Object.fromEntries(arrEntries);
+// console.log(objEntries);
+
+// // Object.getPrototypeOf()
+// const ob = {};
+// console.log(ob);
+// const obProto = Object.getPrototypeOf(ob);
+// console.log(obProto);
+// console.log(obProto === Object.prototype);
+// console.log(Object.prototype);
+
+// Use of this Keyword in arrow functions VS in traditional functions
+
+const button = document.getElementById("btn");
+// Using traditional function
+
+// button.addEventListener("click", function () {
+//   console.log(this);
+// });
+
+// Using arrow function
+button.addEventListener("click", () => {
+  console.log(this);
 });
-console.log(objDefine);
-
-// Object.defineProperties() : multiple properties
-const objDefineMultiple = {};
-Object.defineProperties(objDefineMultiple, {
-  name: { value: "Sharma", writable: false },
-  age: { value: 25, writable: true },
-});
-console.log(objDefineMultiple);
-
-//Object.isExtensible()
-const objExtensible = {};
-console.log(Object.isExtensible(objExtensible));
-Object.preventExtensions(objExtensible);
-console.log(Object.isExtensible(objExtensible));
-
-// Object.isFrozen()
-const objFrozen = { name: "Swapnil", age: 21 };
-Object.freeze(objFrozen);
-console.log(Object.isFrozen(objFrozen));
-
-// Object.setPrototypeOf()
-const proto = {
-  greet() {
-    console.log("Hello, I am Proto");
-  },
-};
-const objProto = {};
-Object.setPrototypeOf(objProto, proto);
-objProto.greet();
-
-//Object.fromEntries() : Transforms a list of entries into key-value pairs into an object
-const arrEntries = [
-  ["name", "Swapnil"],
-  ["age", 22],
-  ["base", "case"],
-];
-const objEntries = Object.fromEntries(arrEntries);
-console.log(objEntries);
-
-// Object.getPrototypeOf()
-const ob = {};
-console.log(ob);
-const obProto = Object.getPrototypeOf(ob);
-console.log(obProto);
-console.log(obProto === Object.prototype);
-console.log(Object.prototype);
