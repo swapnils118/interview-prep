@@ -49,6 +49,7 @@
 //  - map, filter and reduce
 //  - Polyfill for map
 //  - JavaScript Object Methods
+//  - Design Patterns in React
 
 //           ---------------------- END  --------------------------
 
@@ -632,14 +633,14 @@
 
 // Use of this Keyword in arrow functions VS in traditional functions
 
-const button = document.getElementById("btn");
-// Using traditional function
+// const button = document.getElementById("btn");
+// // Using traditional function
 
 // button.addEventListener("click", function () {
 //   console.log(this);
 // });
 
-// Using arrow function
-button.addEventListener("click", () => {
-  console.log(this);
-});
+// // Using arrow function
+// button.addEventListener("click", () => {
+//   console.log(this);
+// });
