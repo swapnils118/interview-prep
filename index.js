@@ -644,3 +644,24 @@
 // button.addEventListener("click", () => {
 //   console.log(this);
 // });
+
+// ------------------------ JavaScript Coding Questions ---------------
+
+// Write a function that returns the reverse of a string
+function reverseString(string) {
+  let reversed = " ";
+  for (let i = string.length - 1; i >= 0; i--) {
+    reversed += string[i];
+  }
+  return reversed;
+}
+
+const resultReversed = reverseString("Swapnil");
+console.log(resultReversed);
+
+// Solution using JavaScript in-built methods
+function stringReverse(string) {
+  return string.split("").reverse().join("");
+}
+
+console.log(stringReverse("Swapnil"));
