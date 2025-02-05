@@ -647,21 +647,35 @@
 
 // ------------------------ JavaScript Coding Questions ---------------
 
-// Write a function that returns the reverse of a string
-function reverseString(string) {
-  let reversed = " ";
-  for (let i = string.length - 1; i >= 0; i--) {
-    reversed += string[i];
+// // Write a function that returns the reverse of a string
+// function reverseString(string) {
+//   let reversed = " ";
+//   for (let i = string.length - 1; i >= 0; i--) {
+//     reversed += string[i];
+//   }
+//   return reversed;
+// }
+
+// const resultReversed = reverseString("Swapnil");
+// console.log(resultReversed);
+
+// // Solution using JavaScript in-built methods
+// function stringReverse(string) {
+//   return string.split("").reverse().join("");
+// }
+
+// console.log(stringReverse("Swapnil"));
+
+// Write a function to return the longest word in the sentence
+function longestWord(sentence) {
+  const words = sentence.split(" ");
+  let longestWord = "";
+  for (let word of words) {
+    if (word.length > longestWord.length) {
+      longestWord = word;
+    }
   }
-  return reversed;
+  return longestWord;
 }
 
-const resultReversed = reverseString("Swapnil");
-console.log(resultReversed);
-
-// Solution using JavaScript in-built methods
-function stringReverse(string) {
-  return string.split("").reverse().join("");
-}
-
-console.log(stringReverse("Swapnil"));
+console.log(longestWord("Hello, I am Swapnil Sharma"));
