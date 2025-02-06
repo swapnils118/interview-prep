@@ -681,14 +681,22 @@
 // console.log(longestWord("Hello, I am Swapnil Sharma"));
 
 // Above problem using simple for loop
-function longestWord1(para) {
-  const word1 = para.split(" ");
-  let longest = "";
-  for (let i = 0; i < word1.length; i++) {
-    if (word1[i].length > longest.length) {
-      longest = word1[i];
-    }
-  }
-  return longest;
+// function longestWord1(para) {
+//   const word1 = para.split(" ");
+//   let longest = "";
+//   for (let i = 0; i < word1.length; i++) {
+//     if (word1[i].length > longest.length) {
+//       longest = word1[i];
+//     }
+//   }
+//   return longest;
+// }
+// console.log(longestWord1("Hello world"));
+
+// WAF that check whether a given string is a Palindrome or not
+function isPalindrome(string) {
+  const checkPalindrome = string.split("").reverse().join("");
+  return checkPalindrome === string;
 }
-console.log(longestWord1("Hello world"));
+
+console.log(isPalindrome("aa bab aa"));
