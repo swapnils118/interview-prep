@@ -693,10 +693,18 @@
 // }
 // console.log(longestWord1("Hello world"));
 
-// WAF that check whether a given string is a Palindrome or not
-function isPalindrome(string) {
-  const checkPalindrome = string.split("").reverse().join("");
-  return checkPalindrome === string;
+// // WAF that check whether a given string is a Palindrome or not
+// function isPalindrome(string) {
+//   const checkPalindrome = string.split("").reverse().join("");
+//   return checkPalindrome === string;
+// }
+
+// console.log(isPalindrome("aa bab aa"));
+
+// WAF to remove duplicate elements from an array
+function removeDuplicate(arr) {
+  return [...new Set(arr)];
 }
 
-console.log(isPalindrome("aa bab aa"));
+const array = [1, 2, 3, 4, 5, 6, 1, 2, 3];
+console.log(removeDuplicate(array));
