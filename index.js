@@ -667,15 +667,28 @@
 // console.log(stringReverse("Swapnil"));
 
 // Write a function to return the longest word in the sentence
-function longestWord(sentence) {
-  const words = sentence.split(" ");
-  let longestWord = "";
-  for (let word of words) {
-    if (word.length > longestWord.length) {
-      longestWord = word;
+// function longestWord(sentence) {
+//   const words = sentence.split(" ");
+//   let longestWord = "";
+//   for (let word of words) {
+//     if (word.length > longestWord.length) {
+//       longestWord = word;
+//     }
+//   }
+//   return longestWord;
+// }
+
+// console.log(longestWord("Hello, I am Swapnil Sharma"));
+
+// Above problem using simple for loop
+function longestWord1(para) {
+  const word1 = para.split(" ");
+  let longest = "";
+  for (let i = 0; i < word1.length; i++) {
+    if (word1[i].length > longest.length) {
+      longest = word1[i];
     }
   }
-  return longestWord;
+  return longest;
 }
-
-console.log(longestWord("Hello, I am Swapnil Sharma"));
+console.log(longestWord1("Hello world"));
