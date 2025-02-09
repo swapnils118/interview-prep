@@ -736,24 +736,37 @@
 // WAF to check whether two strings are Anagrams or not
 // Anagram: is a word formed by rearranging the letters from another word. eg [listen,silent]
 
-function anagram(string1, string2) {
-  const s1 = string1.split("").sort().join("");
-  const s2 = string2.split("").sort().join("");
-  return s1 === s2;
-}
+// function anagram(string1, string2) {
+//   const s1 = string1.split("").sort().join("");
+//   const s2 = string2.split("").sort().join("");
+//   return s1 === s2;
+// }
 
-console.log(anagram("silent", "listen"));
+// console.log(anagram("silent", "listen"));
 
-// WAF to return to number of vowels in a string
-function vowel(string) {
-  // const ref = ["a", "e", "i", "o", "u"];
-  const ref = "aeiou";
-  let final = 0;
-  for (let el of string.toLowerCase()) {
-    if (ref.includes(el)) {
-      final++;
+// // WAF to return to number of vowels in a string
+// function vowel(string) {
+//   // const ref = ["a", "e", "i", "o", "u"];
+//   const ref = "aeiou";
+//   let final = 0;
+//   for (let el of string.toLowerCase()) {
+//     if (ref.includes(el)) {
+//       final++;
+//     }
+//   }
+//   return final;
+// }
+// console.log(vowel("I am Swapnil Sharma and I will achieve my target soon"));
+// console.log(vowel("aeiou"));
+
+// WAF to return the largest number in an array
+function largestNum(arr) {
+  let big = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > big) {
+      big = arr[i];
     }
   }
-  return final;
+  return big;
 }
-console.log(vowel("I am Swapnil Sharma and I will achieve my target soon"));
+console.log(largestNum([11, 22, 33, 44, 55, 6, 7, 8]));
