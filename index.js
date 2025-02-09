@@ -713,22 +713,47 @@
 // const array = [1, 2, 3, 4, 5, 6, 1, 2, 3];
 // console.log(removeDuplicate(array));
 
-// Removing duplicate entries from array with indexOf() method
-function zeroDuplicate(ar) {
-  let zeroD = [];
-  for (let i = 0; i < ar.length; i++) {
-    if (zeroD.indexOf(ar[i]) === -1) {
-      zeroD.push(ar[i]);
-    }
-  }
-  return zeroD;
+// // Removing duplicate entries from array with indexOf() method
+// function zeroDuplicate(ar) {
+//   let zeroD = [];
+//   for (let i = 0; i < ar.length; i++) {
+//     if (zeroD.indexOf(ar[i]) === -1) {
+//       zeroD.push(ar[i]);
+//     }
+//   }
+//   return zeroD;
+// }
+
+// console.log(
+//   zeroDuplicate([1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4])
+// );
+
+// // indexOf() method
+// const indexArray = [11, 22, 33, 44, 55, 66, 3, 1, 3, 5, 7, 9];
+
+// console.log(indexArray.indexOf(2));
+
+// WAF to check whether two strings are Anagrams or not
+// Anagram: is a word formed by rearranging the letters from another word. eg [listen,silent]
+
+function anagram(string1, string2) {
+  const s1 = string1.split("").sort().join("");
+  const s2 = string2.split("").sort().join("");
+  return s1 === s2;
 }
 
-console.log(
-  zeroDuplicate([1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4])
-);
+console.log(anagram("silent", "listen"));
 
-// indexOf() method
-const indexArray = [11, 22, 33, 44, 55, 66, 3, 1, 3, 5, 7, 9];
-
-console.log(indexArray.indexOf(2));
+// WAF to return to number of vowels in a string
+function vowel(string) {
+  // const ref = ["a", "e", "i", "o", "u"];
+  const ref = "aeiou";
+  let final = 0;
+  for (let el of string.toLowerCase()) {
+    if (ref.includes(el)) {
+      final++;
+    }
+  }
+  return final;
+}
+console.log(vowel("I am Swapnil Sharma and I will achieve my target soon"));
