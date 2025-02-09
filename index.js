@@ -759,14 +759,25 @@
 // console.log(vowel("I am Swapnil Sharma and I will achieve my target soon"));
 // console.log(vowel("aeiou"));
 
-// WAF to return the largest number in an array
-function largestNum(arr) {
-  let big = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > big) {
-      big = arr[i];
+// // WAF to return the largest number in an array
+// function largestNum(arr) {
+//   let big = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > big) {
+//       big = arr[i];
+//     }
+//   }
+//   return big;
+// }
+// console.log(largestNum([11, 22, 33, 44, 55, 6, 7, 8]));
+
+// WAF to check if a number is Prime or not
+function isPrime(n) {
+  for (let i = 2; i <= n / 2; i++) {
+    if (n % i === 0) {
+      return false;
     }
   }
-  return big;
+  return true;
 }
-console.log(largestNum([11, 22, 33, 44, 55, 6, 7, 8]));
+console.log(isPrime(5));
