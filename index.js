@@ -50,6 +50,10 @@
 //  - Polyfill for map
 //  - JavaScript Object Methods
 //  - Design Patterns in React
+//  - Write a function that returns the reverse of a string
+//  - Write a function to return the longest word in the sentence
+//  - WAF that check whether a given string is a Palindrome or not
+//  - WAF to remove duplicate elements from an array
 
 //           ---------------------- END  --------------------------
 
@@ -647,7 +651,7 @@
 
 // ------------------------ JavaScript Coding Questions ---------------
 
-// // Write a function that returns the reverse of a string
+// --------- Write a function that returns the reverse of a string --------
 // function reverseString(string) {
 //   let reversed = " ";
 //   for (let i = string.length - 1; i >= 0; i--) {
@@ -666,7 +670,7 @@
 
 // console.log(stringReverse("Swapnil"));
 
-// Write a function to return the longest word in the sentence
+// ------ Write a function to return the longest word in the sentence ------
 // function longestWord(sentence) {
 //   const words = sentence.split(" ");
 //   let longestWord = "";
@@ -693,7 +697,7 @@
 // }
 // console.log(longestWord1("Hello world"));
 
-// // WAF that check whether a given string is a Palindrome or not
+// //--- WAF that check whether a given string is a Palindrome or not ----
 // function isPalindrome(string) {
 //   const checkPalindrome = string.split("").reverse().join("");
 //   return checkPalindrome === string;
@@ -701,10 +705,30 @@
 
 // console.log(isPalindrome("aa bab aa"));
 
-// WAF to remove duplicate elements from an array
-function removeDuplicate(arr) {
-  return [...new Set(arr)];
+// ---- WAF to remove duplicate elements from an array -------
+// function removeDuplicate(arr) {
+//   return [...new Set(arr)];
+// }
+
+// const array = [1, 2, 3, 4, 5, 6, 1, 2, 3];
+// console.log(removeDuplicate(array));
+
+// Removing duplicate entries from array with indexOf() method
+function zeroDuplicate(ar) {
+  let zeroD = [];
+  for (let i = 0; i < ar.length; i++) {
+    if (zeroD.indexOf(ar[i]) === -1) {
+      zeroD.push(ar[i]);
+    }
+  }
+  return zeroD;
 }
 
-const array = [1, 2, 3, 4, 5, 6, 1, 2, 3];
-console.log(removeDuplicate(array));
+console.log(
+  zeroDuplicate([1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4])
+);
+
+// indexOf() method
+const indexArray = [11, 22, 33, 44, 55, 66, 3, 1, 3, 5, 7, 9];
+
+console.log(indexArray.indexOf(2));
