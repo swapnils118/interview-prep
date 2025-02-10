@@ -782,14 +782,21 @@
 // }
 // console.log(isPrime(5));
 
-// Calculate the factorial of a number
-function factorial(num) {
-  if (num === 0) return 1;
-  let fact = 1;
-  for (let i = 1; i <= num; i++) {
-    fact = fact * i;
-  }
-  return fact;
+// // Calculate the factorial of a number
+// function factorial(num) {
+//   if (num === 0) return 1;
+//   let fact = 1;
+//   for (let i = 1; i <= num; i++) {
+//     fact = fact * i;
+//   }
+//   return fact;
+// }
+
+// console.log(factorial(5));
+
+// WAF to remove all the whitespaces from a string
+function noWhite(str) {
+  return str.replace(/\s/g, "");
 }
 
-console.log(factorial(5));
+console.log(noWhite("Hey,  I am life"));
