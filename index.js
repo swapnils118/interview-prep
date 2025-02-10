@@ -771,13 +771,25 @@
 // }
 // console.log(largestNum([11, 22, 33, 44, 55, 6, 7, 8]));
 
-// WAF to check if a number is Prime or not
-function isPrime(n) {
-  for (let i = 2; i <= n / 2; i++) {
-    if (n % i === 0) {
-      return false;
-    }
+// // WAF to check if a number is Prime or not
+// function isPrime(n) {
+//   for (let i = 2; i <= n / 2; i++) {
+//     if (n % i === 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// console.log(isPrime(5));
+
+// Calculate the factorial of a number
+function factorial(num) {
+  if (num === 0) return 1;
+  let fact = 1;
+  for (let i = 1; i <= num; i++) {
+    fact = fact * i;
   }
-  return true;
+  return fact;
 }
-console.log(isPrime(5));
+
+console.log(factorial(5));
