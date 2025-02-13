@@ -54,6 +54,7 @@
 //  - Write a function to return the longest word in the sentence
 //  - WAF that check whether a given string is a Palindrome or not
 //  - WAF to remove duplicate elements from an array
+//  - JavaScript: Programming language used for converting static web pages to dynamic web pages.
 
 //           ---------------------- END  --------------------------
 
@@ -705,7 +706,7 @@
 
 // console.log(isPalindrome("aa bab aa"));
 
-// ---- WAF to remove duplicate elements from an array -------
+// -------------- WAF to remove duplicate elements from an array ---------
 // function removeDuplicate(arr) {
 //   return [...new Set(arr)];
 // }
@@ -733,7 +734,7 @@
 
 // console.log(indexArray.indexOf(2));
 
-// WAF to check whether two strings are Anagrams or not
+// -------- WAF to check whether two strings are Anagrams or not -----------
 // Anagram: is a word formed by rearranging the letters from another word. eg [listen,silent]
 
 // function anagram(string1, string2) {
@@ -744,7 +745,7 @@
 
 // console.log(anagram("silent", "listen"));
 
-// // WAF to return to number of vowels in a string
+// // ------------- WAF to return the number of vowels in a string ------------
 // function vowel(string) {
 //   // const ref = ["a", "e", "i", "o", "u"];
 //   const ref = "aeiou";
@@ -759,7 +760,7 @@
 // console.log(vowel("I am Swapnil Sharma and I will achieve my target soon"));
 // console.log(vowel("aeiou"));
 
-// // WAF to return the largest number in an array
+// // ----------- WAF to return the largest number in an array -------------
 // function largestNum(arr) {
 //   let big = 0;
 //   for (let i = 0; i < arr.length; i++) {
@@ -771,7 +772,7 @@
 // }
 // console.log(largestNum([11, 22, 33, 44, 55, 6, 7, 8]));
 
-// // WAF to check if a number is Prime or not
+// // -------------- WAF to check if a number is Prime or not --------------
 // function isPrime(n) {
 //   for (let i = 2; i <= n / 2; i++) {
 //     if (n % i === 0) {
@@ -782,7 +783,7 @@
 // }
 // console.log(isPrime(5));
 
-// // Calculate the factorial of a number
+// // --------------- Calculate the factorial of a number -------------------
 // function factorial(num) {
 //   if (num === 0) return 1;
 //   let fact = 1;
@@ -794,9 +795,8 @@
 
 // console.log(factorial(5));
 
-// WAF to remove all the whitespaces from a string
-function noWhite(str) {
-  return str.replace(/\s/g, "");
-}
-
-console.log(noWhite("Hey,  I am life"));
+// // ----------- WAF to remove all the whitespaces from a string --------
+// function noWhite(str) {
+//   return str.replace(/\s/g, "");
+// }
+// console.log(noWhite("Hello, I  m ay not be symmet rical raw inpu t"));
