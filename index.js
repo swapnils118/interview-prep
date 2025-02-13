@@ -58,7 +58,7 @@
 //  - Array: Collection of values
 //  - Functions: Block of code that performs a specific task or returns a value
 //  - Object: Collection of multiple values or combination of values and functions
-//  -
+//  - Loop: Programming way of running a code until a certain condition is met.
 
 //           ---------------------- END  --------------------------
 
