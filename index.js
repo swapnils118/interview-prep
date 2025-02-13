@@ -54,7 +54,11 @@
 //  - Write a function to return the longest word in the sentence
 //  - WAF that check whether a given string is a Palindrome or not
 //  - WAF to remove duplicate elements from an array
-//  - JavaScript: Programming language used for converting static web pages to dynamic web pages.
+//  - JavaScript: Programming language used for converting static web pages to interactive and dynamic web pages.
+//  - Array: Collection of values
+//  - Functions: Block of code that performs a specific task or returns a value
+//  - Object: Collection of multiple values or combination of values and functions
+//  -
 
 //           ---------------------- END  --------------------------
 
