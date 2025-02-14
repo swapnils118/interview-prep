@@ -824,3 +824,10 @@ const obj = {
 for (let el in obj) {
   console.log(obj[el]);
 }
+
+// for each
+const arrayForEach = [7, 8, 6];
+
+arrayForEach.forEach(function (el) {
+  console.log(el);
+});
