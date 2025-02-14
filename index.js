@@ -825,9 +825,19 @@ for (let el in obj) {
   console.log(obj[el]);
 }
 
-// for each
+// forEach
 const arrayForEach = [7, 8, 6];
 
 arrayForEach.forEach(function (el) {
   console.log(el);
+});
+
+const objForEach = {
+  first: "Ram",
+  second: "Lakshman",
+  third: "Hanuman",
+};
+
+Object.values(objForEach).forEach(function (val) {
+  console.log(val);
 });
