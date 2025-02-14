@@ -58,7 +58,8 @@
 //  - Array: Collection of values
 //  - Functions: Block of code that performs a specific task or returns a value
 //  - Object: Collection of multiple values or combination of values and functions
-//  - Loop: Programming way of running a code until a certain condition is met.
+//  - Loop: Programming way of running a code until a certain condition is met
+//  - for of and for in loop
 
 //           ---------------------- END  --------------------------
 
@@ -804,3 +805,22 @@
 //   return str.replace(/\s/g, "");
 // }
 // console.log(noWhite("Hello, I  m ay not be symmet rical raw inpu t"));
+
+// --------------------- for of and for in loop ---------------------------
+// for of
+const array = [1, 2, 3, 4, 5];
+
+for (let el of array) {
+  console.log(el);
+}
+
+// for in
+const obj = {
+  first: "Ram",
+  second: "Lakshman",
+  third: "Hanuman",
+};
+
+for (let el in obj) {
+  console.log(obj[el]);
+}
