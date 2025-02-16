@@ -806,38 +806,41 @@
 // }
 // console.log(noWhite("Hello, I  m ay not be symmet rical raw inpu t"));
 
-// --------------------- for of and for in loop ---------------------------
-// for of
-const array = [1, 2, 3, 4, 5];
+// ------------------ for of, for in loop and forEach method -----------------
+// // for of
+// const array = [1, 2, 3, 4, 5];
 
-for (let el of array) {
-  console.log(el);
-}
+// for (let el of array) {
+//   console.log(el);
+// }
 
-// for in
-const obj = {
-  first: "Ram",
-  second: "Lakshman",
-  third: "Hanuman",
-};
+// // for in
+// const obj = {
+//   first: "Ram",
+//   second: "Lakshman",
+//   third: "Hanuman",
+// };
 
-for (let el in obj) {
-  console.log(obj[el]);
-}
+// for (let el in obj) {
+//   console.log(obj[el]);
+// }
 
-// forEach
-const arrayForEach = [7, 8, 6];
+// // forEach: is a method available on arrays and objects that allows us to iterate over each element of the array and perform some action on each element
+// const arrayForEach = [7, 8, 6];
 
-arrayForEach.forEach(function (el) {
-  console.log(el);
-});
+// arrayForEach.forEach(function (el) {
+//   console.log(el);
+// });
 
-const objForEach = {
-  first: "Ram",
-  second: "Lakshman",
-  third: "Hanuman",
-};
+// const objForEach = {
+//   first: "Ram",
+//   second: "Lakshman",
+//   third: "Hanuman",
+// };
 
-Object.values(objForEach).forEach(function (val) {
-  console.log(val);
-});
+// Object.values(objForEach).forEach(function (val) {
+//   console.log(val);
+// });
+
+// ------------------ Interview question of React.js -----------------
+// Make a header component with a navigation to 4 sections and each corresponding section content will apear with clicking each respectively.
