@@ -61,6 +61,7 @@
 //  - Loop: Programming way of running a code until a certain condition is met
 //  - for of and for in loop
 //  - 7 types of functions in JS: Named fn, Anonymous fn, Function expression, Arrow functions, IIFE, Callback fn, Higher-Order function
+//  - CSS Box Model
 
 //           ---------------------- END  --------------------------
 
