@@ -21,9 +21,6 @@
 //  - What is a Flux
 //  - How is Redux different from Flux
 //  - Difference between Redux and Context Api
-//  - What is React Router
-//  - Why do we need React Router
-//  - How is React Routing different from Conventional Routing
 //  - How do we implement React Routing
 //  - First class functions
 //  - Call, apply and bind
@@ -66,55 +63,55 @@
 //           ---------------------- END  --------------------------
 
 // // ---------------------- CLOSURE EXAMPLE --------------------
-// // Case 1:
-// function outer() {
-//   var a = 10;
+// Case 1:
+function outer() {
+  var a = 10;
 
-//   function inner() {
-//     console.log(a);
-//     // var a = 100 will give undefined here because of hoisting because wen are trying to access a before initialization here in local scope
-//   }
-//   var a = 20;
-//   return inner;
-// }
-// // Global
-// var a = 30;
-// // Function call
-// var result = outer();
-// result();
+  function inner() {
+    console.log(a);
+    // var a = 100 will give undefined here because of hoisting because wen are trying to access a before initialization here in local scope
+  }
+  var a = 20;
+  return inner;
+}
+// Global
+var a = 30;
+// Function call
+var result = outer();
+result();
 
-// // Case 2:
-// function outer1() {
-//   // var a = 10;
+// Case 2:
+function outer1() {
+  // var a = 10;
 
-//   function inner1() {
-//     console.log(a);
-//   }
-//   // var a = 20;
-//   return inner1;
-// }
-// // Global
-// var a = 30;
+  function inner1() {
+    console.log(a);
+  }
+  // var a = 20;
+  return inner1;
+}
+// Global
+var a = 30;
 
-// // Function call
-// var result1 = outer1();
-// result1();
+// Function call
+var result1 = outer1();
+result1();
 
-// // Case 3: Closure with Hoisting(output: undefined because of hoisting in local scope)
-// function outer2() {
-//   // var a = 20;
-//   function inner2() {
-//     console.log(a);
-//     var a = 10;
-//   }
-//   return inner2;
-// }
-// // Global
-// var a = 30;
+// Case 3: Closure with Hoisting(output: undefined because of hoisting in local scope)
+function outer2() {
+  // var a = 20;
+  function inner2() {
+    console.log(a);
+    var a = 10;
+  }
+  return inner2;
+}
+// Global
+var a = 30;
 
-// // Function call
-// var result2 = outer2();
-// result2();
+// Function call
+var result2 = outer2();
+result2();
 
 // // Case 4:
 // function outer3() {
